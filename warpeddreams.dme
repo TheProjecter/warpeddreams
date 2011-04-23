@@ -1,0 +1,25 @@
+// DM Environment file for warpeddreams.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+#define DEBUG
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include <divinetraveller\clickingfunctions\clicking\clicking.dme>
+#include <forum_account\sidescroller\sidescroller.dme>
+#include "other_platforms.dm"
+#include "portals.dm"
+#include "timer.dm"
+#include "interface.dmf"
+#include "map.dmm"
+// END_INCLUDE
+
