@@ -7,6 +7,20 @@
 
 // BEGIN_FILE_DIR
 #define FILE_DIR .
+#define FILE_DIR "+sidescroller"
+#define FILE_DIR "+sidescroller/background-demo"
+#define FILE_DIR "+sidescroller/common"
+#define FILE_DIR "+sidescroller/game-demo"
+#define FILE_DIR "+sidescroller/interaction-demo"
+#define FILE_DIR "+sidescroller/mario-demo"
+#define FILE_DIR "+sidescroller/movement-demo"
+#define FILE_DIR "+sidescroller/pathing-demo"
+#define FILE_DIR "+sidescroller/ramps-demo"
+#define FILE_DIR "+sidescroller/shooter-demo"
+#define FILE_DIR "+sidescroller/simple-demo"
+#define FILE_DIR "assets"
+#define FILE_DIR "backup"
+#define FILE_DIR "code"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES
@@ -15,12 +29,21 @@
 
 // BEGIN_INCLUDE
 #include <divinetraveller\clickingfunctions\clicking\clicking.dme>
-#include <forum_account\sidescroller\sidescroller.dme>
-#include "other_platforms.dm"
-#include "portals.dm"
-#include "pushable_blocks.dm"
-#include "timer.dm"
-#include "interface.dmf"
-#include "map.dmm"
+#include "+sidescroller\keyboard.dm"
+#include "+sidescroller\mob-movement.dm"
+#include "+sidescroller\mob-pathing.dm"
+#include "+sidescroller\pixel-movement.dm"
+#include "+sidescroller\procs.dm"
+#include "+sidescroller\world.dm"
+#include "+sidescroller\game-demo\enemies.dm"
+#include "+sidescroller\game-demo\mob.dm"
+#include "+sidescroller\game-demo\platforms.dm"
+#include "+sidescroller\game-demo\tiles.dm"
+#include "assets\interface.dmf"
+#include "assets\map.dmm"
+#include "code\other_platforms.dm"
+#include "code\portals.dm"
+#include "code\pushable_blocks.dm"
+#include "code\timer.dm"
 // END_INCLUDE
 

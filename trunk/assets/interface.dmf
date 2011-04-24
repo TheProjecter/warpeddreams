@@ -118,7 +118,7 @@ window "default"
 		is-visible = true
 		is-disabled = false
 		is-transparent = false
-		is-default = false
+		is-default = true
 		border = line
 		drop-zone = false
 		right-click = false

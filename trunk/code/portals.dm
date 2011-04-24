@@ -16,17 +16,11 @@ mob
 	var/mob/portal/last_portal
 
 	player
-		//TODO: make this work so boxes can be pushed, or something. God damn it.
-		bump(atom/a, d)
-			world << a
-
-		can_bump(atom/a)
-			world << a
-			if(istype(a,/mob/portal))
-				world << 1
-			if(istype(a, /mob/box))
-				world << 2
-			return ..()
+		bump(atom/a,d)
+			if(istype(a,/mob/pushable))
+				var/mob/m = a
+				m.pixel_move(vel_x*2, 0)
+			..(a,d)
 
 		move(direction)
 			..(direction)
@@ -37,6 +31,7 @@ mob
 
 		gravity()
 			if(vel_y<-20)vel_y=-20
+			if(vel_y>20) vel_y=20
 			..()
 
 		var/mob/portal
@@ -68,6 +63,8 @@ mob
 		icon='portals.dmi'
 		density=1
 		movement()
+		pheight=32
+		pwidth=32
 		var/mob/portal/linked
 
 	movement()
