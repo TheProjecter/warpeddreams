@@ -20,5 +20,5 @@ mob/platform
 
 		New()
 			..()
-			start_px = py
-			end_px = py+80
+			if(!start_px)start_px = py
+			if(!end_px)end_px = py+80

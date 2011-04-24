@@ -18,6 +18,7 @@
 #include <forum_account\sidescroller\sidescroller.dme>
 #include "other_platforms.dm"
 #include "portals.dm"
+#include "pushable_blocks.dm"
 #include "timer.dm"
 #include "interface.dmf"
 #include "map.dmm"

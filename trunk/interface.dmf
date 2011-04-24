@@ -69,7 +69,7 @@ window "default"
 	elem "default"
 		type = MAIN
 		pos = 281,0
-		size = 640x480
+		size = 818x480
 		anchor1 = none
 		anchor2 = none
 		font-family = ""
@@ -104,12 +104,37 @@ window "default"
 		macro = "macro"
 		menu = "menu"
 		on-close = ""
+	elem "output1"
+		type = OUTPUT
+		pos = 480,0
+		size = 338x480
+		anchor1 = 59,0
+		anchor2 = 100,100
+		font-family = ""
+		font-size = 0
+		font-style = ""
+		text-color = #000000
+		background-color = #ffffff
+		is-visible = true
+		is-disabled = false
+		is-transparent = false
+		is-default = false
+		border = line
+		drop-zone = false
+		right-click = false
+		saved-params = "max-lines"
+		link-color = #0000ff
+		visited-color = #ff00ff
+		style = ""
+		enable-http-images = false
+		max-lines = 1000
+		image = ""
 	elem "map1"
 		type = MAP
 		pos = 0,0
-		size = 640x480
+		size = 480x480
 		anchor1 = 0,0
-		anchor2 = 100,100
+		anchor2 = 59,100
 		font-family = ""
 		font-size = 0
 		font-style = ""
