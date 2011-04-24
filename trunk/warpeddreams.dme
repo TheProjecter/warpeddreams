@@ -29,6 +29,7 @@
 
 // BEGIN_INCLUDE
 #include <divinetraveller\clickingfunctions\clicking\clicking.dme>
+#include "_todo.dm"
 #include "+sidescroller\keyboard.dm"
 #include "+sidescroller\mob-movement.dm"
 #include "+sidescroller\mob-pathing.dm"
@@ -41,9 +42,12 @@
 #include "+sidescroller\game-demo\tiles.dm"
 #include "assets\interface.dmf"
 #include "assets\map.dmm"
+#include "code\linkable.dm"
 #include "code\other_platforms.dm"
+#include "code\player.dm"
 #include "code\portals.dm"
 #include "code\pushable_blocks.dm"
 #include "code\timer.dm"
+#include "code\world.dm"
 // END_INCLUDE
 
