@@ -123,6 +123,9 @@ mob
 			if(istype(a, /mob/pushable))
 				return a.density
 
+			if(istype(a, /mob/portal))
+				return a.density
+
 			return 0
 
 		// Note: the can_move proc has been removed. pixel_move now does all of the work directly.
