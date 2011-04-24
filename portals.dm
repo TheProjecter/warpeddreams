@@ -11,9 +11,22 @@ turf/LeftShiftClick(mob/player/m)
 
 turf/var/is_portalable=1
 turf/wall/is_portalable=0
+
 mob
 	var/mob/portal/last_portal
+
 	player
+		//TODO: make this work so boxes can be pushed, or something. God damn it.
+		bump(atom/a, d)
+			world << a
+
+		can_bump(atom/a)
+			world << a
+			if(istype(a,/mob/portal))
+				world << 1
+			if(istype(a, /mob/box))
+				world << 2
+			return ..()
 
 		move(direction)
 			..(direction)
@@ -54,7 +67,6 @@ mob
 	portal
 		icon='portals.dmi'
 		density=1
-		gravity()
 		movement()
 		var/mob/portal/linked
 
