@@ -55,6 +55,7 @@ mob
 					portal2.icon_state="blue[portal2.linked?"-motion":""]"
 
 	portal
+		layer=MOB_LAYER-1
 		icon='portals.dmi'
 		density=0
 		movement()
