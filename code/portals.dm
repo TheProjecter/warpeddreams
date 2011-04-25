@@ -77,7 +77,6 @@ mob
 
 		for(var/mob/portal/e in oview(1,src))
 			if(e.inside(src) && e.linked && e!=last_portal)
-			//	loc = e.linked.loc
 				last_portal = e.linked
 				set_pos(e.linked.px+e.linked.offset_x, e.linked.py+e.linked.offset_y)
 				break
