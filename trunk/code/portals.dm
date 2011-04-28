@@ -25,8 +25,8 @@ mob
 					break
 
 		gravity()
-			if(vel_y<-20)vel_y=-20
-			if(vel_y>20) vel_y=20
+		//	if(vel_y<-20)vel_y=-20
+		//	if(vel_y>20) vel_y=20
 			..()
 
 		var/mob/portal

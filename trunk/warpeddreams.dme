@@ -19,6 +19,7 @@
 #define FILE_DIR "+sidescroller/shooter-demo"
 #define FILE_DIR "+sidescroller/simple-demo"
 #define FILE_DIR "assets"
+#define FILE_DIR "assets/backup"
 #define FILE_DIR "backup"
 #define FILE_DIR "code"
 // END_FILE_DIR
@@ -42,7 +43,7 @@
 #include "+sidescroller\game-demo\tiles.dm"
 #include "assets\interface.dmf"
 #include "assets\map.dmm"
-#include "code\linkable.dm"
+#include "code\mechanisms.dm"
 #include "code\other_platforms.dm"
 #include "code\player.dm"
 #include "code\portals.dm"

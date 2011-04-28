@@ -2,7 +2,9 @@
 "b" = (/turf,/area)
 "c" = (/turf/wall/ramp_3,/area)
 "d" = (/turf/ladder,/area)
-"e" = (/mob/pushable/box,/turf,/area)
+"e" = (/mob/mechanism/pushable/box,/turf,/area)
+"f" = (/mob/platform,/turf,/area)
+"g" = (/mob/mechanism/spring,/turf,/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -44,15 +46,15 @@ abbbbbbbbbbbbbabbbbabbbbbbbbbbbbbbbbbbbbbbbbbbbbba
 abbbbbbbbbbbbbabbbbabbbbbbbbbbbbbbbbbbbbbbbbbbbbba
 abbbbbbbbbbbbbaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbba
 abbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaabbbbbbbbbba
-aaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbbbbebbebbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaaaabbbbbbbbbbba
-abbbbbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+aaaaaaaaadbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbdbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbdbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbdbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbdbbbbbbbebbebbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbdbbbaaaaaaaaafbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbdbbbbbbbbbbbbbbbbbbbbbbbaaaaabbbbbbbbbbba
+abbbbbebbdbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbdbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
+abbbbbbbbdbbgbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}

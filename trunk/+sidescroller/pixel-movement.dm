@@ -83,7 +83,8 @@ mob
 	platform
 		var
 			list/riders = list()
-mob/pushable
+mob/mechanism
+
 mob
 	animate_movement = 0
 
@@ -120,10 +121,7 @@ mob
 			if(istype(a, /mob/platform))
 				return a.density
 
-			if(istype(a, /mob/pushable))
-				return a.density
-
-			if(istype(a, /mob/portal))
+			if(istype(a, /mob/mechanism))
 				return a.density
 
 			return 0

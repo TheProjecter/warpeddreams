@@ -29,9 +29,7 @@
 #include "pixel-movement.dm"
 #include "procs.dm"
 #include "world.dm"
-#include "game-demo\enemies.dm"
-#include "game-demo\mob.dm"
-#include "game-demo\platforms.dm"
-#include "game-demo\tiles.dm"
+#include "pathing-demo\demo.dm"
+#include "pathing-demo\map.dmm"
 // END_INCLUDE
 
