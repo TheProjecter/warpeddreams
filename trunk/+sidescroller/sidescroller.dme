@@ -31,5 +31,8 @@
 #include "pixel-movement.dm"
 #include "procs.dm"
 #include "world.dm"
+#include "interaction-demo\demo.dm"
+#include "interaction-demo\enemy.dm"
+#include "interaction-demo\map.dmm"
 // END_INCLUDE
 

@@ -8,6 +8,7 @@
 // BEGIN_FILE_DIR
 #define FILE_DIR .
 #define FILE_DIR "+sidescroller"
+#define FILE_DIR "+sidescroller/v2.4"
 #define FILE_DIR "+sidescroller/background-demo"
 #define FILE_DIR "+sidescroller/common"
 #define FILE_DIR "+sidescroller/game-demo"
@@ -19,9 +20,9 @@
 #define FILE_DIR "+sidescroller/shooter-demo"
 #define FILE_DIR "+sidescroller/simple-demo"
 #define FILE_DIR "assets"
-#define FILE_DIR "assets/backup"
 #define FILE_DIR "backup"
 #define FILE_DIR "code"
+#define FILE_DIR "info"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES
@@ -30,7 +31,7 @@
 
 // BEGIN_INCLUDE
 #include <divinetraveller\clickingfunctions\clicking\clicking.dme>
-#include "_todo.dm"
+#include "+sidescroller\camera.dm"
 #include "+sidescroller\keyboard.dm"
 #include "+sidescroller\mob-movement.dm"
 #include "+sidescroller\mob-pathing.dm"
