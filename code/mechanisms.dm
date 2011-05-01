@@ -48,14 +48,11 @@ mob
 					pheight=1
 					icon_state="button_pressed"
 					if(linked)
-						//var/mob/mechanism/linkable/linked = link
 						linked.activate(m)
-						//link.activate(m)
 				stepped_off(mob/m)
 					pheight=4
 					icon_state="button"
 					if(linked)
-					//	var/mob/mechanism/linkable/linked = linked
 						linked.deactivate(m)
 
 			door

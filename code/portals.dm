@@ -13,6 +13,14 @@ turf/var/is_portalable=1
 turf/wall/is_portalable=0
 
 mob
+
+	gravity()
+		for(var/mob/portal/e in oview(2,src))
+			if(!e.inside(src) && e==last_portal)
+				last_portal=null
+				break
+		..()
+
 	var/mob/portal/last_portal
 
 	player
@@ -23,11 +31,6 @@ mob
 				if(!e.inside(src) && e==last_portal)
 					last_portal=null
 					break
-
-		gravity()
-		//	if(vel_y<-20)vel_y=-20
-		//	if(vel_y>20) vel_y=20
-			..()
 
 		var/mob/portal
 			portal1
@@ -72,6 +75,14 @@ mob
 			offset_y = pixel_y
 			px += pixel_x
 			py += pixel_y
+			for(var/atom/t in oview(1,src))
+				if(isturf(t))
+					var/turf/x = t
+					if(t.inside(src) && !x.is_portalable)
+						del src
+				if(istype(t,/mob/portal))
+					if(t.inside(src))
+						del src
 
 	movement()
 		..()
@@ -79,5 +90,5 @@ mob
 		for(var/mob/portal/e in oview(1,src))
 			if(e.inside(src) && e.linked && e!=last_portal)
 				last_portal = e.linked
-				set_pos(e.linked.px+e.linked.offset_x, e.linked.py+e.linked.offset_y)
+				set_pos(e.linked.px+e.linked.offset_x+(32-pwidth)/2, e.linked.py+e.linked.offset_y+(32-pwidth)/2)
 				break
