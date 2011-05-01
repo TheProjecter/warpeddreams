@@ -23,23 +23,23 @@ mob
 				pheight=16
 
 		linkable
-			var/mob/mechanism/linkable/link
+			var/mob/mechanism/linkable/linked
 			proc
 				activate(mob/m)
 				deactivate(mob/m)
 			New()
 				..()
 				for(var/mob/mechanism/linkable/o in world)
-					if(o!=src && o.link == link)
-						o.link = src
-						link = o
+					if(o!=src && o.linked == linked)
+						o.linked = src
+						linked = o
 			button
 				pheight=4
 				pwidth=16
 				offset_x = 8
 
 				//this is a test link, normally you would set it to a unique value in the map editor
-				link=1
+				linked=1
 
 
 				icon_state="button"
@@ -47,15 +47,15 @@ mob
 				stepped_on(mob/m)
 					pheight=1
 					icon_state="button_pressed"
-					if(link)
-						var/mob/mechanism/linkable/linked = link
+					if(linked)
+						//var/mob/mechanism/linkable/linked = link
 						linked.activate(m)
 						//link.activate(m)
 				stepped_off(mob/m)
 					pheight=4
 					icon_state="button"
-					if(link)
-						var/mob/mechanism/linkable/linked = link
+					if(linked)
+					//	var/mob/mechanism/linkable/linked = linked
 						linked.deactivate(m)
 
 			door
@@ -98,7 +98,7 @@ mob
 
 				locked
 					//this is a test link, normally you would set it to a unique value in the map editor
-					link=1
+					linked=1
 
 					locked=1
 					icon_state="door-locked-closed"
