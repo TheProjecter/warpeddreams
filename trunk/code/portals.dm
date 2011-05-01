@@ -80,7 +80,7 @@ mob
 					var/turf/x = t
 					if(t.inside(src) && !x.is_portalable)
 						del src
-				if(istype(t,/mob/portal))
+				if(istype(t,/mob/portal) && t.icon_state == icon_state)
 					if(t.inside(src))
 						del src
 
