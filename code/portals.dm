@@ -1,10 +1,10 @@
 turf/LeftClick(mob/player/m, loc, control, params)
 	if(is_portalable)
-		m.set_up_portals(1,new /mob/portal(src, params))
+		m.set_up_portals(1,new /mob/portal(src, m.gridlocked, params))
 
 turf/RightClick(mob/player/m, loc, control, params)
 	if(is_portalable)
-		m.set_up_portals(2,new /mob/portal(src, params))
+		m.set_up_portals(2,new /mob/portal(src, m.gridlocked, params))
 
 turf/LeftShiftClick(mob/player/m, loc, control, params)
 	RightClick(m, loc, control, params)
@@ -66,23 +66,24 @@ mob
 		pwidth=32
 		var/mob/portal/linked
 
-		New(loc, params)
+		New(loc, locked, params)
 			..()
-			var/list/l = params2list(params)
-			pixel_x = text2num(l["icon-x"])-16
-			pixel_y = text2num(l["icon-y"])-16
-			offset_x = pixel_x
-			offset_y = pixel_y
-			px += pixel_x
-			py += pixel_y
-			for(var/atom/t in oview(1,src))
-				if(isturf(t))
-					var/turf/x = t
-					if(t.inside(src) && !x.is_portalable)
-						del src
-				if(istype(t,/mob/portal) && t.icon_state == icon_state)
-					if(t.inside(src))
-						del src
+			if(!locked)
+				var/list/l = params2list(params)
+				pixel_x = text2num(l["icon-x"])-16
+				pixel_y = text2num(l["icon-y"])-16
+				offset_x = pixel_x
+				offset_y = pixel_y
+				px += pixel_x
+				py += pixel_y
+				for(var/atom/t in oview(1,src))
+					if(isturf(t))
+						var/turf/x = t
+						if(t.inside(src) && !x.is_portalable)
+							del src
+					if(istype(t,/mob/portal) && t.icon_state == icon_state)
+						if(t.inside(src))
+							del src
 
 	movement()
 		..()
