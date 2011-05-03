@@ -17,13 +17,4 @@ mob-movement.dm:
 18		K_LEFT = "a"
 19		K_UP = "w"
 20		K_DOWN = "s"
-
-pixel-movement.dm:
-->
-124			if(istype(a, /mob/mechanism))
-125				return a.density
-
-anywhere:
-->
-mob/mechanism
 */

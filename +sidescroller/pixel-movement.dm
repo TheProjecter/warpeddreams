@@ -131,9 +131,6 @@ mob
 			if(istype(a, /mob/platform))
 				return a.density
 
-			if(istype(a, /mob/mechanism))
-				return a.density
-
 			return 0
 
 		// Note: the can_move proc has been removed. pixel_move now does all of the work directly.

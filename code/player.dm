@@ -1,6 +1,12 @@
 mob
+	can_bump(atom/a)
+		if(istype(a,/mob/mechanism))
+			return a.density
+		return ..()
+
 	player
 		var/gridlocked=0
+
 		bump(atom/a,d)
 			if(istype(a,/mob/mechanism/pushable))
 				var/mob/m = a
@@ -8,10 +14,11 @@ mob
 			..(a,d)
 
 		key_down(k)
-			if(k == "g")
-				manage_grid()
-			if(k == "x")
-				interact()
+			switch(k)
+				if("g")
+					manage_grid()
+				if("x")
+					interact()
 			..()
 
 		proc
@@ -23,11 +30,13 @@ mob
 				gridlocked = !gridlocked
 
 			load_grid()
-				//this is probably very inefficient
+				//this is probably very inefficient, but for now, it works
 				for(var/xx=1 to world.maxx)
 					for(var/yy=1 to world.maxy)
-						var/image/i = new('other.dmi',locate(xx,yy,z),"screen_overlay")
-						client.images += i
+						var/turf/t = locate(xx,yy,z)
+						if(!istype(t,/turf/wall) || !t.is_portalable)
+							var/image/i = new('other.dmi',t,"target",10)
+							client.images += i
 
 			remove_grid()
 				client.images = new /list()
