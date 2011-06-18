@@ -4,11 +4,12 @@
 "d" = (/turf/ladder,/area)
 "e" = (/mob/mechanism/pushable/box,/turf,/area)
 "f" = (/mob/platform,/turf,/area)
-"g" = (/mob/mechanism/spring/spring_pretty,/turf,/area)
-"h" = (/mob/mechanism/linkable/door,/turf,/area)
-"i" = (/mob/mechanism/linkable/button,/turf,/area)
-"j" = (/mob/mechanism/linkable/door/locked,/turf,/area)
-"k" = (/mob/mechanism/spring,/turf,/area)
+"g" = (/mob/mechanism/pushable/box/spikeball,/turf,/area)
+"h" = (/mob/mechanism/spring/spring_pretty,/turf,/area)
+"i" = (/mob/mechanism/linkable/door,/turf,/area)
+"j" = (/mob/mechanism/linkable/button,/turf,/area)
+"k" = (/mob/mechanism/linkable/door/locked,/turf,/area)
+"l" = (/mob/mechanism/spring,/turf,/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -56,9 +57,9 @@ abbbbbbbbdbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
 abbbbbbbbdbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
 abbbbbbbbdbbbbbbbebbebbbbbbbbbbbbbbbbbbbbbbbbbbbba
 abbbbbbbbdbbbaaaaaaaaafbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbdbbbbbbbbbbbbbbbbbbbbbbbaaaaabbbbbbbbbbba
-abbbbbebbdbbbbbbbbbbbbbbbbbbbbbbbabbbabbbbbbbbbbba
-abbbgbbbbdbbbbbbbbbbbbbbggggbbbbbhbbijbbbbbbbbbbba
-abaakaaaaaaaaaaaaaaaaaaakkkkaaaaaaaaaaaaaaaaaaaaaa
+abbbbbbgbdbbbbbbbbbbbbbbbbbbbbbbbaaaaabbbbbbbbbbba
+abbgbbegbdbbbbbbbbbbbbbbbbbbbbbbbabbbabbbbbbbbbbba
+abbbhbbbbdbbbbbbbbbbbbbbhhhhbbbbbibbjkbbbbbbbbbbba
+abaalaaaaaaaaaaaaaaaaaaallllaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}

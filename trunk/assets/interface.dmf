@@ -68,7 +68,7 @@ menu "menu"
 window "default"
 	elem "default"
 		type = MAIN
-		pos = 281,0
+		pos = 190,0
 		size = 818x480
 		anchor1 = none
 		anchor2 = none
@@ -85,6 +85,7 @@ window "default"
 		drop-zone = false
 		right-click = false
 		saved-params = "pos;size;is-minimized;is-maximized"
+		on-size = ""
 		title = ""
 		titlebar = true
 		statusbar = true
@@ -123,6 +124,7 @@ window "default"
 		drop-zone = false
 		right-click = false
 		saved-params = "max-lines"
+		on-size = ""
 		link-color = #0000ff
 		visited-color = #ff00ff
 		style = ""
@@ -146,8 +148,9 @@ window "default"
 		is-default = false
 		border = none
 		drop-zone = true
-		right-click = false
+		right-click = true
 		saved-params = "icon-size"
+		on-size = ""
 		icon-size = 0
 		text-mode = false
 		on-show = ""
