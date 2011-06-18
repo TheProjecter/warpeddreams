@@ -20,7 +20,6 @@
 #define FILE_DIR "+sidescroller/shooter-demo"
 #define FILE_DIR "+sidescroller/simple-demo"
 #define FILE_DIR "assets"
-#define FILE_DIR "assets/backup"
 #define FILE_DIR "backup"
 #define FILE_DIR "code"
 #define FILE_DIR "info"
