@@ -23,7 +23,7 @@ mob
 
 	proc
 		die()
-			if(dead) return
+			if(dead||health>0) return
 
 			src << "You died! You will respawn shortly."
 			dead = 1

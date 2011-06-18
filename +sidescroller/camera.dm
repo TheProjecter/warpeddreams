@@ -19,7 +19,7 @@ Camera
 		px = 0
 		py = 0
 		lag = 0
-		mode = FOLLOW
+		mode = SLIDE
 
 		minx = 0
 		maxx = 320000

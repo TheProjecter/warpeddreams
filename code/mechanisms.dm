@@ -3,7 +3,7 @@ mob
 	mechanism
 
 		var/activated
-
+		var/damage
 		density=1
 		icon='other.dmi'
 		set_state()
@@ -18,10 +18,21 @@ mob
 			box
 				icon='icons.dmi'
 				icon_state="box"
-
 				pwidth=16
 				pheight=16
 
+				spikeball
+					icon='other.dmi'
+					icon_state="ball"
+					damage=2
+					pwidth=16
+					pheight=16
+					bump(atom/a,d)
+						world<<"bumped [a]"
+						if(istype(a,/mob/player))
+							var/mob/player/m = a
+							m.hurt(src)
+						..(a,d)
 		linkable
 			var/mob/mechanism/linkable/linked
 			proc

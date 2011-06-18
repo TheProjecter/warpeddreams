@@ -128,7 +128,7 @@ mob
 			if(isturf(a))
 				return a.density
 
-			if(istype(a, /mob/platform))
+			if(istype(a, /mob))
 				return a.density
 
 			return 0
