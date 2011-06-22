@@ -15,16 +15,19 @@ mob
 			pixel_y = offset_y
 
 		pushable
+			var/drag = 1
 			box
 				icon='icons.dmi'
 				icon_state="box"
 				pwidth=16
 				pheight=16
-
+			ball
+				move_speed=5
 				spikeball
 					icon='other.dmi'
 					icon_state="ball"
 					damage=2
+					drag = 5
 					pwidth=16
 					pheight=16
 					bump(atom/a,d)
@@ -33,6 +36,13 @@ mob
 							var/mob/player/m = a
 							m.hurt(src)
 						..(a,d)
+			proc/pushed()
+				while(vel_x)
+					if(vel_x<0)
+						vel_x++
+					else
+						vel_x--
+					sleep(drag)
 		linkable
 			var/mob/mechanism/linkable/linked
 			proc

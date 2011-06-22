@@ -289,12 +289,18 @@ mob
 			// if you're not pressing left or right, slow down.
 			// we want this to happen whether you're on a ladder or not
 			else if(!keys[K_RIGHT] && !keys[K_LEFT])
+//				if(!istype(src,/mob/mechanism/pushable/ball))
 				if(abs(vel_x) < 1)
 					vel_x = 0
 				else if(vel_x > 0)
 					vel_x -= 1
 				else if(vel_x < 0)
 					vel_x += 1
+//				else
+//					if(vel_x > move_speed)
+//						vel_x -= 1
+//					else if(vel_x < -move_speed)
+//						vel_x += 1
 
 			// if you are on a ladder also slow down in the y direction.
 			if(on_ladder && !keys[K_UP] && !keys[K_DOWN])
