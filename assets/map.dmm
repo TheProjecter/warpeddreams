@@ -4,7 +4,7 @@
 "d" = (/turf/ladder,/area)
 "e" = (/mob/mechanism/pushable/box,/turf,/area)
 "f" = (/mob/platform,/turf,/area)
-"g" = (/mob/mechanism/pushable/box/spikeball,/turf,/area)
+"g" = (/mob/mechanism/pushable/ball/spikeball,/turf,/area)
 "h" = (/mob/mechanism/spring/spring_pretty,/turf,/area)
 "i" = (/mob/mechanism/linkable/door,/turf,/area)
 "j" = (/mob/mechanism/linkable/button,/turf,/area)
