@@ -10,10 +10,10 @@ mob
 		var/gridlocked=0
 		var/damaged
 		bump(atom/a,d)
-			if(istype(a,/mob/mechanism))
-				var/mob/mechanism/m = a
-				if(istype(a,/mob/mechanism/pushable))
-					m.pixel_move(vel_x*2, 0)
+			if(istype(a,/mob/mechanism/pushable))
+				var/mob/mechanism/pushable/m = a
+				m.vel_x=src.vel_x+2
+				spawn() m.pushed()
 				if(m.damage)
 					hurt(m)
 			..(a,d)
