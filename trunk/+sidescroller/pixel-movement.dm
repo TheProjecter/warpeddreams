@@ -12,6 +12,8 @@
 turf
 	var
 		ladder = 0
+		funnel = 0
+		grav_dir
 
 atom
 	// we need these vars for turfs and mobs at least. We probably don't

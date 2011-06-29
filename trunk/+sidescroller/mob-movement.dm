@@ -44,6 +44,7 @@ mob
 		on_ceiling = 0
 		on_ground = 0
 		on_ladder = 0
+		in_funnel = 0
 
 		mob/platform/platform
 		base_state = ""
@@ -55,6 +56,8 @@ mob
 		last_x = -1
 		last_y = -1
 		last_z = -1
+
+		jumping
 
 	proc
 		// a is the atom you're bumping and d is the direction you were
@@ -89,6 +92,7 @@ mob
 			else
 				icon_state = base + MOVING
 
+
 			if(keys[K_RIGHT])
 				dir = EAST
 			else if(keys[K_LEFT])
@@ -108,10 +112,17 @@ mob
 						__jump_delay -= 1
 						return 0
 
-			return on_ground
+			if(on_ground)
+				jumping=1
+				return 1
+			else if(jumping==1)
+				jumping=0
+				return 1
+			return 0
 
 		jump()
 			vel_y = 10
+
 
 		drop()
 			dropped = 1
@@ -144,7 +155,32 @@ mob
 					vel_y -= 1
 
 		gravity()
+			if(in_funnel)
+				switch(loc:grav_dir)
+					if("west")
+						vel_y=0
+						vel_x-=3
+					if("east")
+						vel_y=0
+						vel_x+=3
+					if("north")
+						vel_x=0
+						vel_y+=3
+					if("south")
+						vel_x=0
+						vel_y-=3
+				if(vel_x>20)
+					vel_x=20
+				if(vel_y>20)
+					vel_y=20
+				if(vel_x<(-20))
+					vel_x=(-20)
+				if(vel_y<(-20))
+					vel_y=(-20)
+				return
 			if(on_ladder || on_ground) return
+
+
 
 			vel_y -= 1
 			if(vel_y < -fall_speed)
@@ -177,11 +213,19 @@ mob
 			else if(client)
 				var/turf/t = loc
 
+
+				if(t.funnel)
+					in_funnel = 1
+
+				else
+					in_funnel = 0
+
 				if(t.ladder)
 					if(keys[K_UP] || keys[K_DOWN])
 						if(!on_ladder)
 							vel_y = 0
 						on_ladder = 1
+
 				else
 					on_ladder = 0
 
@@ -281,14 +325,14 @@ mob
 		slow_down()
 			// if you're moving faster than your move_speed, slow down
 			// whether you're pressing an arrow key or not.
-			if(vel_x > move_speed)
+			if(vel_x > move_speed&&!in_funnel)
 				vel_x -= 1
-			else if(vel_x < -move_speed)
+			else if(vel_x < -move_speed&&!in_funnel)
 				vel_x += 1
 
 			// if you're not pressing left or right, slow down.
 			// we want this to happen whether you're on a ladder or not
-			else if(!keys[K_RIGHT] && !keys[K_LEFT])
+			else if(!keys[K_RIGHT] && !keys[K_LEFT]&&!in_funnel)
 //				if(!istype(src,/mob/mechanism/pushable/ball))
 				if(abs(vel_x) < 1)
 					vel_x = 0
