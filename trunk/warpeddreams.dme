@@ -21,6 +21,7 @@
 #define FILE_DIR "+sidescroller/simple-demo"
 #define FILE_DIR "assets"
 #define FILE_DIR "assets/backup"
+#define FILE_DIR "assets/backup/backup"
 #define FILE_DIR "assets/new_icons"
 #define FILE_DIR "backup"
 #define FILE_DIR "code"

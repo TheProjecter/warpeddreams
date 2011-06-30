@@ -17,7 +17,7 @@ mob
 		pushable
 			var/drag = 1
 			box
-				icon='icons.dmi'
+				icon='other.dmi'
 				icon_state="box"
 				pwidth=16
 				pheight=16
