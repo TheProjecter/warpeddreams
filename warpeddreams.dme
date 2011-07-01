@@ -9,6 +9,7 @@
 #define FILE_DIR .
 #define FILE_DIR "+sidescroller"
 #define FILE_DIR "+sidescroller/v2.4"
+#define FILE_DIR "+sidescroller/v2.5"
 #define FILE_DIR "+sidescroller/background-demo"
 #define FILE_DIR "+sidescroller/common"
 #define FILE_DIR "+sidescroller/game-demo"
@@ -36,6 +37,7 @@
 #include <divinetraveller\clickingfunctions\clicking\clicking.dme>
 #include "+sidescroller\camera.dm"
 #include "+sidescroller\keyboard.dm"
+#include "+sidescroller\mob-debugging.dm"
 #include "+sidescroller\mob-movement.dm"
 #include "+sidescroller\mob-pathing.dm"
 #include "+sidescroller\pixel-movement.dm"
@@ -47,6 +49,7 @@
 #include "+sidescroller\game-demo\tiles.dm"
 #include "assets\interface.dmf"
 #include "assets\map.dmm"
+#include "code\funnels.dm"
 #include "code\mechanisms.dm"
 #include "code\other_platforms.dm"
 #include "code\player.dm"

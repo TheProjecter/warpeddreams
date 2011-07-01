@@ -9,6 +9,7 @@ mob
 	player
 		var/gridlocked=0
 		var/damaged
+		var/in_funnel
 		bump(atom/a,d)
 			if(istype(a,/mob/mechanism/pushable))
 				var/mob/mechanism/pushable/m = a
@@ -17,6 +18,39 @@ mob
 				if(m.damage)
 					hurt(m)
 			..(a,d)
+
+		action()
+			..()
+			var/turf/t = loc
+			in_funnel = t.funnel
+
+		gravity()
+			..()
+			if(in_funnel)
+				var/turf/t = loc
+				switch(t.grav_dir)
+					if("west")
+						vel_y=0
+						vel_x-=3
+					if("east")
+						vel_y=0
+						vel_x+=3
+					if("north")
+						vel_x=0
+						vel_y+=3
+					if("south")
+						vel_x=0
+						vel_y-=3
+				if(vel_x>20)
+					vel_x=20
+				if(vel_y>20)
+					vel_y=20
+				if(vel_x<(-20))
+					vel_x=(-20)
+				if(vel_y<(-20))
+					vel_y=(-20)
+				return
+
 
 		key_down(k)
 			switch(k)

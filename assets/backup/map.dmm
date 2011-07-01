@@ -2,15 +2,18 @@
 "b" = (/turf,/area)
 "c" = (/turf/wall/ramp_3,/area)
 "d" = (/turf/ladder,/area)
-"e" = (/turf,/turf/funnel/up,/area)
-"f" = (/mob/mechanism/pushable/box,/turf,/area)
-"g" = (/mob/platform,/turf,/area)
-"h" = (/mob/mechanism/pushable/ball/spikeball,/turf,/area)
-"i" = (/mob/mechanism/spring/spring_pretty,/turf,/area)
-"j" = (/mob/mechanism/linkable/door,/turf,/area)
-"k" = (/mob/mechanism/linkable/button,/turf,/area)
-"l" = (/mob/mechanism/linkable/door/locked,/turf,/area)
-"m" = (/mob/mechanism/spring,/turf,/area)
+"e" = (/turf,/turf/funnel/left,/area)
+"f" = (/turf,/turf/funnel/up,/area)
+"g" = (/turf,/turf/funnel/up,/turf/funnel/right,/area)
+"h" = (/turf,/turf/funnel/right,/area)
+"i" = (/mob/mechanism/pushable/box,/turf,/area)
+"j" = (/mob/platform,/turf,/area)
+"k" = (/mob/mechanism/pushable/ball/spikeball,/turf,/area)
+"l" = (/mob/mechanism/spring/spring_pretty,/turf,/area)
+"m" = (/mob/mechanism/linkable/door,/turf,/area)
+"n" = (/mob/mechanism/linkable/button,/turf,/area)
+"o" = (/mob/mechanism/linkable/door/locked,/turf,/area)
+"p" = (/mob/mechanism/spring,/turf,/area)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -48,19 +51,19 @@ abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
 abbbbbbbbbbbbbaaaaaabbaabbbbbbbbbbbbbbbbbbbbbbbbba
 abbbbbbbbbbbbbabbbbabbbbbbbbbbbbbbbbbbbbbbbbbbbbba
 abbbbbbbbbbbbbabbbbabbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbabbbbabbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbabbbbabbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbbbbaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbbbebbbbbbbbbbbbbbaaaaaaaaaaaaabbbbbbbbbba
-aaaaaaaaadbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbdbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbdbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbdbebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbdbebbbbbfbbfbbbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbbbdbebaaaaaaaaagbbbbbbbbbbbbbbbbbbbbbbbbbba
-abbbbbbhbdbebbbbbbbbbbbbbbbbbbbbbaaaaabbbbbbbbbbba
-abbhbbfhbdbebbbbbbbbbbbbbbbbbbbbbabbbabbbbbbbbbbba
-abbbibbbbdbbbbbbbbbbbbbbiiiibbbbbjbbklbbbbbbbbbbba
-abaamaaaaaaaaaaaaaaaaaaammmmaaaaaaaaaaaaaaaaaaaaaa
+abbbbbbbbbbbbbabbbbabbbbbbbbbbbeeeeeeeeeeebbbbbbba
+abbbbbbbbbbbbbabbbbabbbbbbbbbbbbbbbbbbbbbfbbbbbbba
+abbbbbbbbbbbbbaaaaaabbbbbbbbbbbbbbbbbbbbbfbbbbbbba
+abeeeeeebbbbbbbbbbbbbbbbbbaaaaaaaaaaaaabbfbbbbbbba
+aaaaaaaaadgbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbfbbbbbbba
+abbbbbbbbdgbbbbbbbbbbbbbbbbbbbhhhhhhhhhhhfbbbbbbba
+abbbbbbbbdfbbbbbbbbbbbbbbbbbbbfbbbbbbbbbbbbbbbbbba
+abbbbbbbbdfbbbbbbbbbbbbbbbbbbbfbbbbbbbbbbbbbbbbbba
+abbbbbbbbdfbbbbbbibbibbbbbbbbbfbbbbbbbbbbbbbbbbbba
+abbbbbbbbdfbbaaaaaaaaajbbbbbbbfbbbbbbbbbbbbbbbbbba
+abbbbbbkbdfbbbbbbbbbbbbbbbbbbbfbbaaaaabbbbbbbbbbba
+abbkbbikbdfbbbbbbbbbbbbbbbbbbbbbbabbbabbbbbbbbbbba
+abbblbbbbdbbbbbbbbbbbbbbllllbbbbbmbbnobbbbbbbbbbba
+abaapaaaaaaaaaaaaaaaaaaappppaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
